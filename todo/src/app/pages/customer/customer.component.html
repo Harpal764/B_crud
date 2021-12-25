@@ -1,0 +1,70 @@
+<div class="container">
+<div class="row">
+  <div class="col-4 ">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">
+          <h4>Create Customer</h4>
+        </div>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="submit()" [formGroup]="customer">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" class="form-control" formControlName="firstname">
+          </div>
+
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" formControlName="lastname">
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" formControlName="email">
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <select name="" id="" class="form-control" formControlName="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+
+            <input type="submit" class="form-control btn btn-success">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-8"><table class="table table-stripped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Gender</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let ct of Customers">
+      <td>{{ct.id}}</td>
+      <td>{{ct.firstname}}</td>
+      <td>{{ct.lastname}}</td>
+      <td>{{ct.email}}</td>
+      <td>{{ct.gender}}</td>
+      <td>
+        <a href="#" (click)="Edit(ct.id)"><i class="fa fa-edit"></i></a>
+        <a href="#" (click)="deleteCustomer(ct.id)"><i class="fa fa-trash text-danger p-3"></i></a>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+</div>
+</div>

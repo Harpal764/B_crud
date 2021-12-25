@@ -1,0 +1,18 @@
+{
+  "data": [
+    {
+      "firstname": "deepa",
+      "lastname": "kumari",
+      "email": "deep@f.com",
+      "gender": "female",
+      "id": 1
+    },
+    {
+      "firstname": "gajandra",
+      "lastname": "bhaubali",
+      "email": "gb12@gmail.com",
+      "gender": "male",
+      "id": 4
+    }
+  ]
+}
